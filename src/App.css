@@ -1,3 +1,7 @@
+.root {
+  padding: 12px;
+}
+
 .employeeRow {
   display: flex;
   justify-content: center;

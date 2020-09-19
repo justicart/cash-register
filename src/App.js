@@ -62,7 +62,7 @@ function App() {
   const cashButtons = cashAmounts.map((cashAmount) => {
     return (<button style={{ height, minWidth }} key={cashAmount} onClick={() => {
       setPendingAmountTendered(pendingAmountTendered + cashAmount);
-    }}>${cashAmount}</button>)
+    }}>+${cashAmount}</button>)
   });
   cashButtons.push(<button style={{ height, minWidth }} onClick={() => {
     setPendingAmountTendered(0);
@@ -70,8 +70,7 @@ function App() {
   const changeButtons = cashAmounts.map((cashAmount) => {
     return (<button style={{ height, minWidth }} key={cashAmount} onClick={() => {
       setChangeGuess(changeGuess + cashAmount);
-    }}>
-      ${cashAmount}</button>);
+    }}>+${cashAmount}</button>);
   })
   changeButtons.push(<button style={{ height, minWidth }} onClick={() => {
     setChangeGuess(0);
@@ -96,7 +95,7 @@ function App() {
     )
   })
   return (
-    <div>
+    <div className="root">
       <div className="employeeRow">{employeeResetElements}</div>
       <div className="productRow">{productElements}</div>
 
